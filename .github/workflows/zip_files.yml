@@ -14,6 +14,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: vimtor/action-zip@v1.1
         with:
-          files: plugin.video.lo-scienziato-pazzo
+          files: plugin.video.lo-scienziato-pazzo/
           dest: repo/installer.zip
           recursive: false

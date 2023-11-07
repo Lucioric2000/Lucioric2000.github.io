@@ -31,7 +31,7 @@ jobs:
       - name: Zip Files
         uses: vimtor/action-zip@v1.1
         with:
-          files: plugin.video.lo-scienziato-pazzo
+          files: plugin.video.lo-scienziato-pazzo/
           dest: repo/plugin.video.lo-scienziato-pazzo.zip
           recursive: false
       - name: Setup Pages
