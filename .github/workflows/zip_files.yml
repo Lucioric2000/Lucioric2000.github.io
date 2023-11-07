@@ -16,3 +16,4 @@ jobs:
         with:
           files: plugin.video.lo-scienziato-pazzo
           dest: repo/installer.zip
+          recursive: false
