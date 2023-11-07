@@ -1,3 +1,4 @@
-FROM centos:latest
-RUN yum update && yum upgrade -y
+FROM centos:7
+RUN yum check-update -y || { rc=$?; [ "$rc" -eq 100 ] && exit 0; exit "$rc"; }
+RUN yum upgrade
 RUN yum install kodi-pvr-iptvsimple
