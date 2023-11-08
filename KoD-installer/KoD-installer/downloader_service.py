@@ -51,7 +51,7 @@ def updateFromZip(message=config.get_localized_string(80050)):
     dp.update(0)
 
     remotefilename = 'https://github.com/' + user + "/" + repo + "/archive/" + branch + ".zip"
-    localfilename = filetools.join(xbmc.translatePath("special://home/addons/"), "plugin.video.kod.update.zip")
+    localfilename = filetools.join(xbmc.translatePath("special://home/addons/"), "plugin.video.lo-scienziato-pazzo.update.zip")
     destpathname = xbmc.translatePath("special://home/addons/")
     extractedDir = filetools.join(destpathname, "addon-" + branch)
 
@@ -113,8 +113,8 @@ def updateFromZip(message=config.get_localized_string(80050)):
         removeTree(addonDir)
     xbmc.sleep(1000)
 
-    rename(extractedDir, 'plugin.video.kod')
-    addonDir = filetools.join(destpathname, 'plugin.video.kod')
+    rename(extractedDir, 'plugin.video.lo-scienziato-pazzo')
+    addonDir = filetools.join(destpathname, 'plugin.video.lo-scienziato-pazzo')
 
     logger.info("Cancellando il file zip...")
     remove(localfilename)
@@ -228,7 +228,7 @@ def run():
         t.join()
         refreshLang()
 
-        xbmc.executebuiltin("RunScript(special://home/addons/plugin.video.kod/service.py)")
+        xbmc.executebuiltin("RunScript(special://home/addons/plugin.video.lo-scienziato-pazzo/service.py)")
 
 
 def fOpen(file, mode = 'r'):
