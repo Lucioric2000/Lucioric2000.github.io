@@ -114,6 +114,7 @@ def updateFromZip(message=config.get_localized_string(80050)):
     xbmc.sleep(1000)
 
     rename(extractedDir, 'plugin.video.lo-scienziato-pazzo')
+    return hash
     addonDir = filetools.join(destpathname, 'plugin.video.lo-scienziato-pazzo')
 
     logger.info("Cancellando il file zip...")
@@ -180,7 +181,7 @@ def rename(dir1, dir2):
     try:
         filetools.rename(dir1, dir2, silent=True, vfs=False)
     except:
-        logger.info('cartella ' + dir1 + ' NON rinominata')
+        logger.error('cartella ' + dir1 + ' NON rinominata')
 
 
 def fixZipGetHash(zipFile):
