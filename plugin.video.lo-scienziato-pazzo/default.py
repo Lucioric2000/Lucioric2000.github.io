@@ -16,8 +16,9 @@ dialog = xbmcgui.Dialog()
 VERSION = "4.0.0"
 PATH = "repo" 
 
+dialog.ok("Disabled plugin", "Contact the programmer to get that solved")
 def CATEGORIES():
-    link = OPEN_URL('http://aandroide.github.io/ght.xml').replace('\n','').replace('\r','')
+    link = OPEN_URL('http://aandroide.github.io/configuration/xml/ght.xml').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,1,iconimage,fanart,description)
